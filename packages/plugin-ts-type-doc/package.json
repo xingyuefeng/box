@@ -1,6 +1,6 @@
 {
   "name": "@maliao/plugin-ts-type-doc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "编译ts生成doc",
   "keywords": [
     "ts",
