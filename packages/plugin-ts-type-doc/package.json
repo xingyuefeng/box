@@ -1,0 +1,37 @@
+{
+  "name": "@box/plugin-ts-type-doc",
+  "version": "0.0.1",
+  "description": "编译ts生成doc",
+  "keywords": [
+    "ts",
+    "doc"
+  ],
+  "author": "xingyuefeng <15262870437@163.com>",
+  "homepage": "https://github.com/xingyuefeng/box#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xingyuefeng/box.git"
+  },
+  "scripts": {
+    "start": "tsc -w",
+    "build": "rm -rf lib && tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "bugs": {
+    "url": "https://github.com/xingyuefeng/box/issues"
+  },
+  "devDependencies": {
+    "typedoc": "^0.22.15",
+    "typescript": "^4.6.4",
+    "webpack": "^5.72.0"
+  }
+}
