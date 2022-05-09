@@ -4,6 +4,7 @@
   "description": "demo",
   "author": "xingyuefeng <15262870437@163.com>",
   "homepage": "https://github.com/xingyuefeng/box#readme",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xingyuefeng/box.git"
@@ -23,5 +24,6 @@
     "babel-loader": "^8.2.5",
     "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2"
-  }
+  },
+  "gitHead": "46ca0756a26f6c6f368ca75986b8684660131be5"
 }
