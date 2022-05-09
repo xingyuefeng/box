@@ -1,5 +1,5 @@
 {
-  "name": "@box/plugin-ts-type-doc",
+  "name": "@maliao/plugin-ts-type-doc",
   "version": "0.0.1",
   "description": "编译ts生成doc",
   "keywords": [
@@ -33,5 +33,6 @@
     "typedoc": "^0.22.15",
     "typescript": "^4.6.4",
     "webpack": "^5.72.0"
-  }
+  },
+  "gitHead": "412c5beaae386daf6fe4d81e12ea141c3c806736"
 }
