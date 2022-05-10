@@ -6,7 +6,9 @@
   ],
   "scripts": {
     "clean": "rm -rf node_modules ./packages/*/node_modules",
-    "setup": "npm run clean && yarn install  && lerna bootstrap"
+    "setup": "npm run clean && yarn install  && lerna bootstrap",
+    "publish": "cd packages/plugin-ts-type-doc && npm run build",
+    "doc":  "cd examples/plugin-ts-type-doc-demo && npm run build"
   
   }
 }
