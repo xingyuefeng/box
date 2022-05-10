@@ -1,0 +1,744 @@
+{
+	"id": 0,
+	"name": "plugin-ts-type-doc-demo",
+	"kind": 1,
+	"kindString": "Project",
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 31,
+			"name": "MakeHttpCallAOptions",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {},
+			"comment": {
+				"shortText": "The options type for [[`makeHttpCallA`]]."
+			},
+			"children": [
+				{
+					"id": 35,
+					"name": "body",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "functions.ts",
+							"line": 55,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "reference",
+								"qualifiedName": "Blob",
+								"package": "typescript",
+								"name": "Blob"
+							},
+							{
+								"type": "reference",
+								"qualifiedName": "FormData",
+								"package": "typescript",
+								"name": "FormData"
+							}
+						]
+					}
+				},
+				{
+					"id": 34,
+					"name": "headers",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"comment": {
+						"shortText": "e.g. `{ 'Authorization': 'Bearer <access token>' }`"
+					},
+					"sources": [
+						{
+							"fileName": "functions.ts",
+							"line": 54,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "intrinsic",
+								"name": "string"
+							}
+						],
+						"qualifiedName": "Record",
+						"package": "typescript",
+						"name": "Record"
+					}
+				},
+				{
+					"id": 33,
+					"name": "method",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"comment": {
+						"shortText": "e.g. GET, POST, PUT, DELETE"
+					},
+					"sources": [
+						{
+							"fileName": "functions.ts",
+							"line": 51,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 36,
+					"name": "mode",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "functions.ts",
+							"line": 56,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "cors"
+							},
+							{
+								"type": "literal",
+								"value": "no-cors"
+							},
+							{
+								"type": "literal",
+								"value": "same-origin"
+							}
+						]
+					}
+				},
+				{
+					"id": 32,
+					"name": "url",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "functions.ts",
+							"line": 48,
+							"character": 2
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						35,
+						34,
+						33,
+						36,
+						32
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "functions.ts",
+					"line": 47,
+					"character": 17
+				}
+			]
+		},
+		{
+			"id": 4,
+			"name": "concat",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "functions.ts",
+					"line": 40,
+					"character": 16
+				}
+			],
+			"signatures": [
+				{
+					"id": 5,
+					"name": "concat",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"shortText": "A simple generic function that concatenates two arrays.",
+						"text": "Use [`@typeParam <param\nname>`](https://typedoc.org/guides/doccomments/#%40typeparam-%3Cparam-name%3E-or-%40template-%3Cparam-name%3E)\nto document generic type parameters, e.g.\n\n```text\n@typeParam T the element type of the arrays\n```\n"
+					},
+					"typeParameter": [
+						{
+							"id": 6,
+							"name": "T",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {},
+							"comment": {
+								"shortText": "the element type of the arrays\n"
+							}
+						}
+					],
+					"parameters": [
+						{
+							"id": 7,
+							"name": "array1",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 6,
+									"name": "T"
+								}
+							}
+						},
+						{
+							"id": 8,
+							"name": "array2",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 6,
+									"name": "T"
+								}
+							}
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "reference",
+							"id": 6,
+							"name": "T"
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": 9,
+			"name": "makeHttpCallA",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "functions.ts",
+					"line": 66,
+					"character": 16
+				}
+			],
+			"signatures": [
+				{
+					"id": 10,
+					"name": "makeHttpCallA",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"shortText": "A function that takes in an options object that is defined as a separate\ninterface and makes an HTTP call.",
+						"text": "**Make sure to export the options type when using this pattern.** Otherwise,\nTypeDoc will not document the options.\n"
+					},
+					"parameters": [
+						{
+							"id": 11,
+							"name": "options",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"id": 31,
+								"name": "MakeHttpCallAOptions"
+							}
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"qualifiedName": "Response",
+								"package": "typescript",
+								"name": "Response"
+							}
+						],
+						"qualifiedName": "Promise",
+						"package": "typescript",
+						"name": "Promise"
+					}
+				}
+			]
+		},
+		{
+			"id": 12,
+			"name": "makeHttpCallB",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "functions.ts",
+					"line": 79,
+					"character": 16
+				}
+			],
+			"signatures": [
+				{
+					"id": 13,
+					"name": "makeHttpCallB",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"shortText": "A function that takes in an options object and makes an HTTP call.",
+						"text": "The options type is written directly in the function definition.\n"
+					},
+					"parameters": [
+						{
+							"id": 14,
+							"name": "options",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 15,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"children": [
+										{
+											"id": 19,
+											"name": "body",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "functions.ts",
+													"line": 88,
+													"character": 2
+												}
+											],
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "reference",
+														"qualifiedName": "Blob",
+														"package": "typescript",
+														"name": "Blob"
+													},
+													{
+														"type": "reference",
+														"qualifiedName": "FormData",
+														"package": "typescript",
+														"name": "FormData"
+													}
+												]
+											}
+										},
+										{
+											"id": 18,
+											"name": "headers",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"comment": {
+												"shortText": "e.g. `{ 'Authorization': 'Bearer <access token>' }`"
+											},
+											"sources": [
+												{
+													"fileName": "functions.ts",
+													"line": 86,
+													"character": 2
+												}
+											],
+											"type": {
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												],
+												"qualifiedName": "Record",
+												"package": "typescript",
+												"name": "Record"
+											}
+										},
+										{
+											"id": 17,
+											"name": "method",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"comment": {
+												"shortText": "e.g. GET, POST, PUT, DELETE"
+											},
+											"sources": [
+												{
+													"fileName": "functions.ts",
+													"line": 83,
+													"character": 2
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 20,
+											"name": "mode",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "functions.ts",
+													"line": 89,
+													"character": 2
+												}
+											],
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "literal",
+														"value": "cors"
+													},
+													{
+														"type": "literal",
+														"value": "no-cors"
+													},
+													{
+														"type": "literal",
+														"value": "same-origin"
+													}
+												]
+											}
+										},
+										{
+											"id": 16,
+											"name": "url",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "functions.ts",
+													"line": 80,
+													"character": 2
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"kind": 1024,
+											"children": [
+												19,
+												18,
+												17,
+												20,
+												16
+											]
+										}
+									]
+								}
+							}
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"qualifiedName": "Response",
+								"package": "typescript",
+								"name": "Response"
+							}
+						],
+						"qualifiedName": "Promise",
+						"package": "typescript",
+						"name": "Promise"
+					}
+				}
+			]
+		},
+		{
+			"id": 21,
+			"name": "overloadedFunction",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "functions.ts",
+					"line": 103,
+					"character": 16
+				}
+			],
+			"signatures": [
+				{
+					"id": 22,
+					"name": "overloadedFunction",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"shortText": "Stringifies and concatenates two numbers into a single string.",
+						"text": "The documentation site allows you to toggle between the different overloads\nof a function. The implementation signature of the overloaded function is not\nincluded in the documentation.\n"
+					},
+					"parameters": [
+						{
+							"id": 23,
+							"name": "a",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 24,
+							"name": "b",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 25,
+					"name": "overloadedFunction",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"shortText": "Concatenates two strings.",
+						"text": "The documentation site allows you to toggle between the different overloads\nof a function. The implementation signature of the overloaded function is not\nincluded in the documentation.\n"
+					},
+					"parameters": [
+						{
+							"id": 26,
+							"name": "a",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 27,
+							"name": "b",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "sqrt",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "functions.ts",
+					"line": 7,
+					"character": 17
+				}
+			],
+			"signatures": [
+				{
+					"id": 2,
+					"name": "sqrt",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"shortText": "Calculates the square root of a number.",
+						"returns": "the square root if `x` is non-negative or `NaN` if `x` is negative.\n"
+					},
+					"parameters": [
+						{
+							"id": 3,
+							"name": "x",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"shortText": "the number to calculate the root of."
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				}
+			]
+		},
+		{
+			"id": 28,
+			"name": "sqrtArrowFunction",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "functions.ts",
+					"line": 25,
+					"character": 13
+				}
+			],
+			"signatures": [
+				{
+					"id": 29,
+					"name": "sqrtArrowFunction",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"shortText": "Calculates the square root of a number.",
+						"text": "`sqrtArrowFunction` is defined using a variable declaration:\n\n```\nexport const sqrtArrowFunction = (x: number): number => Math.sqrt(x);\n```\n\nTypeDoc is smart and documents `sqrtArrowFunction` as a function rather than a variable.\n",
+						"returns": "the square root if `x` is non-negative or `NaN` if `x` is negative.\n"
+					},
+					"parameters": [
+						{
+							"id": 30,
+							"name": "x",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"shortText": "the number do calculate the root of."
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Interfaces",
+			"kind": 256,
+			"children": [
+				31
+			]
+		},
+		{
+			"title": "Functions",
+			"kind": 64,
+			"children": [
+				4,
+				9,
+				12,
+				21,
+				1,
+				28
+			]
+		}
+	],
+	"sources": [
+		{
+			"fileName": "index.ts",
+			"line": 1,
+			"character": 0
+		}
+	]
+}
