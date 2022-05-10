@@ -23,6 +23,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       
       - run: npm run setup
+      - run: npm run publish
       - run: npm run doc
       - name: deploy docs
         uses: peaceiris/actions-gh-pages@v3
