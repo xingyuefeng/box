@@ -4,24 +4,32 @@ name: CI
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
   workflow_dispatch:
 
 jobs:
   build-maliao:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        node-version: [12.x]
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
 
-      - name: Setup Node
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: 14
-
-      - run: npm run  setup
-      - run: npm install @jsdevtools/npm-publish -g
-      - run: npm-publish --token="${{ secrets.NPM_TOKEN }}" ./packages/plugin-ts-type-doc/package.json
+          node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org/
+      - name: Build
+        run: npm run setup
+        run: npm run doc
+      - name: deploy docs
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./examples/plugin-ts-type-doc-demo/dist
+      - name: deploy packages
+        run: npm install @jsdevtools/npm-publish -g
+        run: npm-publish --token="${{ secrets.NPM_TOKEN }}" ./packages/plugin-ts-type-doc/package.json
 
