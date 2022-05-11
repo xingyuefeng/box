@@ -1,5 +1,5 @@
 const path = require('path');
-const PluginTsTypeDoc = require('@maliao/plugin-ts-type-doc')
+const PluginTsTypeDoc = require('@maliao/plugin-ts-type-doc').default
 
 
 module.exports = {
