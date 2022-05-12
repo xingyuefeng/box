@@ -9,7 +9,7 @@
     "setup": "npm run clean && yarn install  && lerna bootstrap",
     "publish": "cd packages/plugin-ts-type-doc && npm run build",
     "doc":  "cd examples/plugin-ts-type-doc-demo && npm run build",
-    "version": "lerna version --conventional-commits"
+    "version": "lerna version --conventional-commits --no-private"
   
   }
 }
